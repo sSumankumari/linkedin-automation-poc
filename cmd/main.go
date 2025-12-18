@@ -15,64 +15,49 @@ import (
 )
 
 func main() {
-	// Load configuration
 	cfg, err := config.Load()
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	logg := logger.New()
-	logg.Info().Msg("Application started")
+	logg.Info().Msg("LinkedIn Automation POC started")
 
-	// Schedule check
 	if !scheduler.Allowed(cfg.StartHour, cfg.EndHour) {
-		logg.Warn().Msg("Outside allowed execution window. Exiting safely.")
+		logg.Warn().Msg("Outside allowed demo window")
 		return
 	}
 
-	// Launch browser
 	br, err := browser.New(cfg.Headless)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	// Initial human-like behavior
-	br.Page.MustNavigate("https://example.com")
+	// Warm-up behavior
+	br.Page.MustNavigate("https://www.linkedin.com")
 	br.Page.MustWaitLoad()
 
-	stealth.Think(800, 1500)
-	stealth.MoveMouseHuman(br.Page, 400, 300)
+	stealth.Think(800, 1200)
+	stealth.MoveMouseHuman(br.Page, 500, 350)
 	stealth.RandomScroll(br.Page)
 
-	// Initialize services
 	authService := auth.Service{Page: br.Page, Logger: logg}
 	searchService := search.Service{Logger: logg}
 	connectService := connect.Service{Logger: logg}
 
-	// Login with detection
 	if err := authService.Login(cfg.Email, cfg.Password); err != nil {
-		logg.Error().Err(err).Msg("Login failed or checkpoint detected")
+		logg.Error().Err(err).Msg("Login demo failed")
 		return
 	}
 
-	stealth.Think(1000, 2000)
-
-	// Search simulation
 	profiles := searchService.CollectProfiles()
-	logg.Info().Int("count", len(profiles)).Msg("Profiles collected")
 
-	// Connection workflow
 	for _, p := range profiles {
 		logg.Info().Str("profile", p).Msg("Processing profile")
-
-		stealth.Think(1500, 3000)
-		stealth.MoveMouseHuman(br.Page, 600, 350)
-
+		stealth.Think(1200, 2000)
 		connectService.Send(p)
-
-		// Cooldown between actions
 		time.Sleep(2 * time.Second)
 	}
 
-	logg.Info().Msg("Execution completed")
+	logg.Info().Msg("Demo execution completed successfully")
 }

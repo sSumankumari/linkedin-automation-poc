@@ -1,6 +1,7 @@
 package connect
 
 import (
+	"fmt"
 	"time"
 
 	"github.com/rs/zerolog"
@@ -13,7 +14,8 @@ type Service struct {
 func (c *Service) Send(profileURL string) {
 	c.Logger.Info().
 		Str("profile", profileURL).
-		Msg("Simulating connection request")
+		Msg("[DEMO] Connection request simulated")
 
+	fmt.Println("[DEMO] Connect button NOT clicked (ToS safe)")
 	time.Sleep(1 * time.Second)
 }
