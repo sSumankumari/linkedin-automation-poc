@@ -188,6 +188,16 @@ When you run the project:
 
 ---
 
+## 🎥 Demo Video
+
+A short walkthrough demonstrating browser execution, stealth configuration, and human-like interaction simulation.
+
+👉 <a href="https://drive.google.com/file/d/1BM9rj2lN4AMshNVJzjcz-JgM-2DupGCl/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+Watch Demo Video
+</a>
+
+---
+
 ## 🧾 Conclusion
 
 This project demonstrates a demo-only implementation of browser automation concepts using Golang and Rod, focusing on human-like behavior simulation, stealth awareness, and clean modular architecture.
