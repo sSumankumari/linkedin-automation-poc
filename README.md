@@ -62,9 +62,10 @@ The following **non-abusive** stealth concepts are demonstrated:
 ```
 linkedin-automation-poc/
 │
+├── assets/                   # Demo GIFs / images
+│   └── demo.gif
 ├── cmd/
 │   └── main.go                # Application entry point
-│
 ├── internal/
 │   ├── auth/                  # Login demo logic
 │   ├── browser/               # Browser & launcher setup
@@ -77,8 +78,7 @@ linkedin-automation-poc/
 │   ├── storage/               # State placeholder
 │   ├── types/                 # Domain models
 │   └── logger/                # Structured logging
-│
-├── .env.example                # Environment template
+├── .env.example               # Environment template
 ├── go.mod
 ├── go.sum
 └── README.md
@@ -104,7 +104,7 @@ linkedin-automation-poc/
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/linkedin-automation-poc.git
+git clone https://github.com/sSumankumari/linkedin-automation-poc.git
 cd linkedin-automation-poc
 ```
 
@@ -173,6 +173,25 @@ When you run the project:
 
 ---
 
+## 🖼 Demo Preview (GIF)
+
+A short animated preview showcasing browser launch, fingerprint masking, and human-like interaction simulation.
+
+<p align="center">
+  <img src="assets/BrowserAutomationDemo.gif" alt="LinkedIn Automation Demo GIF" width="800"/>
+</p>
+
+---
+
+## 🎥 Demo Video
+
+A short walkthrough demonstrating browser execution, stealth configuration, and human-like interaction simulation.
+
+👉 <a href="https://drive.google.com/file/d/1BM9rj2lN4AMshNVJzjcz-JgM-2DupGCl/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+Watch Demo Video </a>
+
+---
+
 ## 🖥 Sample CLI Output
 
 ```text
@@ -210,18 +229,12 @@ PS C:\Users\suman\ML_projects\linkedin-automation-poc> go run ./cmd
 
 ---
 
-## 🎥 Demo Video
-
-A short walkthrough demonstrating browser execution, stealth configuration, and human-like interaction simulation.
-
-👉 <a href="https://drive.google.com/file/d/1BM9rj2lN4AMshNVJzjcz-JgM-2DupGCl/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-Watch Demo Video
-</a>
-
----
-
 ## 🧾 Conclusion
 
-This project demonstrates a demo-only implementation of browser automation concepts using Golang and Rod, focusing on human-like behavior simulation, stealth awareness, and clean modular architecture.
+This project demonstrates a **demo-only implementation** of browser automation concepts using Golang and Rod, focusing on:
 
-It is intentionally designed for technical evaluation and learning, showcasing how such systems are structured without performing real-world automation or violating platform policies.
+* Human-like behavior simulation
+* Stealth awareness
+* Clean modular architecture
+
+It is intentionally designed for **technical evaluation and learning**, showcasing how such systems are structured without performing real-world automation or violating platform policies.
