@@ -104,7 +104,7 @@ linkedin-automation-poc/
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/your-username/linkedin-automation-poc.git
 cd linkedin-automation-poc
 ```
 
@@ -175,15 +175,37 @@ When you run the project:
 
 ## 🖥 Sample CLI Output
 
-```json
-{"level":"info","message":"LinkedIn Automation POC started"}
-[DEMO] Browser launched with stealth configuration
+```text
+PS C:\Users\suman\ML_projects\linkedin-automation-poc> go run ./cmd
+{"level":"info","time":"2025-12-20T13:05:51+05:30","message":"LinkedIn Automation POC started"}
+[DEMO] Scheduler check: current=13, allowed=0-23
+[DEMO] Chrome launcher started
+[DEMO] Connected to Chrome instance
+[DEMO] Viewport randomized: 1263 x 749
 [DEMO] Fingerprint masking applied
-[DEMO] Human-like mouse movement executed
-[DEMO] Typing simulation in progress
-[DEMO] Profile collection simulated
-[DEMO] Connection request simulated
-{"level":"info","message":"Execution completed"}
+[DEMO] Human thinking delay: 837 ms
+[DEMO] Human-like mouse movement
+[DEMO] Scrolling page by 349px
+{"level":"info","time":"2025-12-20T13:06:03+05:30","message":"[DEMO] Starting login simulation"}
+[DEMO] Human thinking delay: 1136 ms
+[DEMO] Human-like typing started
+[DEMO] Human thinking delay: 760 ms
+[DEMO] Human-like typing started
+[DEMO] Typed dummy credentials using human typing
+[DEMO] Human thinking delay: 1832 ms
+[DEMO] Login button NOT clicked (ToS safe)
+{"level":"info","time":"2025-12-20T13:06:18+05:30","message":"[DEMO] Login flow demonstrated successfully"}
+{"level":"info","time":"2025-12-20T13:06:18+05:30","message":"[DEMO] Simulating LinkedIn search"}
+[DEMO] Profiles parsed from DOM (simulated)
+{"level":"info","profile":"https://linkedin.com/in/demo-profile-1","time":"2025-12-20T13:06:20+05:30","message":"Processing profile"}
+[DEMO] Human thinking delay: 1472 ms
+{"level":"info","profile":"https://linkedin.com/in/demo-profile-1","time":"2025-12-20T13:06:21+05:30","message":"[DEMO] Connection request simulated"}
+[DEMO] Connect button NOT clicked (ToS safe)
+{"level":"info","profile":"https://linkedin.com/in/demo-profile-2","time":"2025-12-20T13:06:24+05:30","message":"Processing profile"}
+[DEMO] Human thinking delay: 1828 ms
+{"level":"info","profile":"https://linkedin.com/in/demo-profile-2","time":"2025-12-20T13:06:26+05:30","message":"[DEMO] Connection request simulated"}
+[DEMO] Connect button NOT clicked (ToS safe)
+{"level":"info","time":"2025-12-20T13:06:29+05:30","message":"Demo execution completed successfully"}
 ```
 
 ---
